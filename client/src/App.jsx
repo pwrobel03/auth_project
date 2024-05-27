@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from './pages/Home.jsx'
+import About from "./pages/About.jsx"
 
 function App() {
   return (
-    <>
-      <div>
-        <h1 className='text-sky-500 text-center'>Vite + React</h1>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
